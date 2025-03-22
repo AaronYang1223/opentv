@@ -5,7 +5,7 @@ from vuer.schemas import ImageBackground, group, Hands, WebRTCStereoVideoPlane, 
 from multiprocessing import Array, Process, shared_memory, Queue, Manager, Event, Semaphore
 import numpy as np
 import asyncio
-from webrtc.zed_server import *
+from .webrtc.zed_server import *
 
 class OpenTeleVision:
     def __init__(self, img_shape, shm_name, queue, toggle_streaming, stream_mode="image", cert_file="./cert.pem", key_file="./key.pem", ngrok=False):
